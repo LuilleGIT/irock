@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iRock</title>
+    <script type="text/javascript">
+        function touchRock() {
+            var userName = prompt("¿Cuál es tu nombre?", "Pon tu nombre aquí");
+    
+            if (userName) {
+                alert("Mucho gusto, " + " " + userName + ".");
+                document.getElementById("rockImg").src = "./rock_happy.png";
+            }
+        }
+    
+        setTimeout(function() {
+            document.getElementById('rockImg').src = "rock.png";
+        }, 1 * 60 * 1000);
+    
+        function resizeRock() {
+            document.getElementById("rockImg").style.height =
+                (document.getElementById("rockImg").clientHeight - 100) * 0.9 + "px";
+        }
+    </script>
+    
+</head>
+<body onload= "alert('Hola soy tu roca mascota.')",resizeRock();>
+    <div style="margin-top: 100px; text-align: center">
+    <img id="rockImg" src="./rock.png" alt="rock" onclick="touchRock()">
+     </div>
+     
+</body>
+</html>
